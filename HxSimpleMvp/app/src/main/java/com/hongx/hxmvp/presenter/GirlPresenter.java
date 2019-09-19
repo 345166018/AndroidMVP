@@ -14,29 +14,8 @@ import java.util.List;
  */
 public class GirlPresenter<T extends IGirlView> extends BasePresenter<T>{
 
-    //持有左边(VIEW)
-//    IGirlView iGirlView;
-
-//    WeakReference<T> iGirlView;
-
     //持有右边(MODEL)
     IGirlModel iGirlModel = new GirlModel();
-
-//    public GirlPresenter(T view) {
-////        this.iGirlView = iGirlView;
-//        iGirlView = new WeakReference<>(view);
-//    }
-
-//    public void attachView(T view) {
-//        iGirlView = new WeakReference<>(view);
-//    }
-
-//    public void detachView() {
-//        if (iGirlView != null) {
-//            iGirlView.clear();
-//            iGirlView = null;
-//        }
-//    }
 
     //执行UI逻辑
     public void fetch() {

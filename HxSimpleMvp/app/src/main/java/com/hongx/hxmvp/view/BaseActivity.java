@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.hongx.hxmvp.presenter.BasePresenter;
 
 
-public abstract class BaseActivity<T extends BasePresenter,V extends IBaseView> extends AppCompatActivity {
+public abstract class BaseActivity<T extends BasePresenter, V extends IBaseView> extends AppCompatActivity {
     //持有表示层
     protected T presenter;
 
@@ -16,9 +16,9 @@ public abstract class BaseActivity<T extends BasePresenter,V extends IBaseView> 
         super.onCreate(savedInstanceState);
 
         //由activity选择一个表示层
-        presenter=createPresenter();
+        presenter = createPresenter();
 
-        presenter.attachView((V)this);
+        presenter.attachView((V) this);
 
     }
 
