@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.hongx.hxmvp.presenter.BasePresenter;
 
 
-public abstract class BaseActivity<T extends BasePresenter,V extends IGirlView> extends AppCompatActivity {
+public abstract class BaseActivity<T extends BasePresenter,V extends IBaseView> extends AppCompatActivity {
     //持有表示层
     protected T presenter;
 

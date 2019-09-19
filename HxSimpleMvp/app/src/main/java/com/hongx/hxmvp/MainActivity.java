@@ -13,7 +13,7 @@ import com.hongx.hxmvp.view.IGirlView;
 
 import java.util.List;
 
-public class MainActivity extends BaseActivity<GirlPresenter<IGirlView>,IGirlView> implements IGirlView {
+public class MainActivity extends BaseActivity<GirlPresenter<IGirlView>, IGirlView> implements IGirlView {
 
     ListView listView;
 //    GirlPresenter presenter;
@@ -22,7 +22,7 @@ public class MainActivity extends BaseActivity<GirlPresenter<IGirlView>,IGirlVie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        listView=findViewById(R.id.listview);
+        listView = findViewById(R.id.listview);
 
 //        presenter = new GirlPresenter(this);
 //        presenter = new GirlPresenter();
@@ -45,6 +45,11 @@ public class MainActivity extends BaseActivity<GirlPresenter<IGirlView>,IGirlVie
 
     @Override
     public void showGirlView(List<Girl> girls) {
-        listView.setAdapter(new GirlAdapter(this,girls));
+        listView.setAdapter(new GirlAdapter(this, girls));
+    }
+
+    @Override
+    public void showErrorMessage(String msg) {
+
     }
 }
